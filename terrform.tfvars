@@ -1,1 +1,0 @@
-ssh_key_pair= "your private key of your system"
