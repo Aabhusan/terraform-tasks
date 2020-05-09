@@ -1,9 +1,9 @@
-output "private_az_subnet_ids-vpc2" {
-  value = module.private_subnets-vpc2.az_subnet_ids
-}
-
 output "private_az_subnet_ids-vpc1" {
   value = module.private_subnets-vpc1.az_subnet_ids
+}
+
+output "private_az_subnet_ids-vpc2" {
+  value = module.private_subnets-vpc2.az_subnet_ids
 }
 
 output "private_az_subnet_ids-vpc3" {

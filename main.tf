@@ -123,7 +123,7 @@ module "private_instance_vpc1" {
   source                      = "git::https://github.com/cloudposse/terraform-aws-ec2-instance.git?ref=master"
   ssh_key_pair                = var.ssh_key_pair
   vpc_id                      = module.vpc1.vpc_id
-  subnet                      = module.private_subnets-vpc1.subnet_id
+  subnet                      = element([module.private_subnets-vpc3.private_az_subnet_ids-vpc1.id], 1 )
   associate_public_ip_address = true
   name                        = "private-instance"
   namespace                   = "eg"
@@ -135,13 +135,12 @@ module "public_instance_vpc3" {
   source                      = "git::https://github.com/cloudposse/terraform-aws-ec2-instance.git?ref=master"
   ssh_key_pair                = var.ssh_key_pair
   vpc_id                      = module.vpc3.vpc_id
-  subnet                      = module.public_subnets-vpc3.subnet_id
+  subnet                      = element([module.public_subnets-vpc3.public_az_subnet_ids-vpc3.id], 1 )
   associate_public_ip_address = true
   name                        = "public-instance"
   namespace                   = "eg"
   stage                       = "test"
 }
-
 
 
 

@@ -1,6 +1,4 @@
-variable "ssh_key_pair" {
-  type="string"
-}
+variable "ssh_key_pair" {}
 
 variable "vpc_region" {
     default="ap-south-1"

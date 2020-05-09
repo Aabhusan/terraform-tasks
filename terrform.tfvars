@@ -1,1 +1,1 @@
-ssh_key_pairs= "your private key of your system"
+ssh_key_pair= "your private key of your system"
